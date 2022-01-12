@@ -1,0 +1,24 @@
+### GET DATA ALL
+GET http://localhost:5000/products
+
+### GET DATA BY ID
+GET http://localhost:5000/products/5
+
+### POST DATA
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "title": "Product 1",
+    "price": 1000
+}
+### UPDATE DATA
+PATCH http://localhost:5000/products/1
+Content-Type: application/json
+
+{
+    "title": "Nice to Update Data Number early",
+    "price": 45000
+}
+###DELETE DATA
+DELETE http://localhost:5000/products/5
