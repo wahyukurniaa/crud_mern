@@ -1,6 +1,19 @@
-import React from 'react';
+import {useState,useEffect} from 'react';
+import axios from 'axios';
 
 const ProductList = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(()=>{
+    getProducts();
+  },[])
+
+  const getProducts = async () =>{
+    const response = await axios.get('http://localhost:5000/products');
+    console.log(response.data);
+    
+  }
+
   return (
     <div>
       <table className="table is-striped is-fullwidth">
